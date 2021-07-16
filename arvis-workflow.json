@@ -1,0 +1,38 @@
+{
+    "$schema": "https://raw.githubusercontent.com/jopemachine/arvis-extension-validator/master/workflow-schema.json",
+    "creator": "patrickkahl",
+    "name": "arvis-bitly",
+    "enabled": true,
+    "description": "Shorten URL with bit.ly",
+    "readme": "",
+    "version": "0.0.1",
+    "variables": {
+        "BITLY_ACCESS_TOKEN": ""
+    },
+    "webAddress": "https://github.com/arvis-workflows/arvis-bitly",
+    "defaultIcon": "icon.png",
+    "commands": [
+        {
+            "type": "keyword",
+            "command": "bitly",
+            "title": "Shorten URL with bit.ly",
+            "subtitle": "",
+            "argType": "no",
+            "actions": [
+                {
+                    "type": "script",
+                    "modifiers": "normal",
+                    "script": "node index.js",
+                    "actions": [
+                        {
+                            "type": "notification",
+                            "modifiers": "normal",
+                            "title": "Bitly job done",
+                            "text": "{query}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

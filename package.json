@@ -1,0 +1,38 @@
+{
+  "name": "arvis-bitly",
+  "version": "0.0.1",
+  "description": "Shorten URL with bit.ly",
+  "license": "MIT",
+  "author": {
+    "name": "Patrick Kahl",
+    "email": "Kahl.Patrick@googlemail.com",
+    "url": "github.com/patrickkahl"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "postinstall": "arvish-init",
+    "preuninstall": "arvish-cleanup",
+    "prepublishOnly": "arvish-prepublish"
+  },
+  "files": [
+    "index.js",
+    "icon.png",
+    "arvis-workflow.json"
+  ],
+  "keywords": [
+    "arvis",
+    "bit.ly",
+    "bitly",
+    "workflow",
+    "arvish"
+  ],
+  "dependencies": {
+    "arvish": ">=0.6.1",
+    "bitly": "^6.0.8",
+    "clipboardy": "^1.2.1",
+    "dotenv": "^4.0.0",
+    "valid-url": "^1.0.9"
+  }
+}
